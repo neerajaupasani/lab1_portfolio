@@ -74,7 +74,7 @@ let pages = [
   { url: 'projects/', title: 'Projects' },
   { url: 'contact/', title: 'Contact'},
   { url: 'resume/', title: 'Resume'},
-  { url: 'https://neerajaupasani.github.io/lab1_portfolio/', 
+  { url: 'https://github.com/neerajaupasani/lab1_portfolio', 
     title: 'GitHub'}
 ];
 

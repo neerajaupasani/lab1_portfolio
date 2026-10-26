@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
+
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
+
+      /* Headings */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
+
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
+
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
+
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
+
+      h3 {
+        font-size: 130%;
+      }
+
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav>
+
+      <a href = "index.html"> Back to Projects </a>
+    
+    </nav>
+
+    <header>
+      <h1>
+        <small> Project 2 </small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong> Neeraja Upasani </strong> — <em> nupasani@ucsd.edu </em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: States with better access to abortion services tend to have a lower percentage of residents traveling out of state for abortion care in the year 2020. </h2>
+      
+      <p> Data Source: Abortion Data by U.S. State from the Guttmacher Institute. </p>
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="../images/perChart1.png" alt="" />
+          <figcaption> Chart 1: States marked with orange circles are the 
+            states with higher travel percentage than expected by the trend line,
+            while states marked with red circles are the states with lower
+            travel percentage than expected by the trend line.  </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li> 1.	Selecting features % of women aged 15-44 
+            living in a county without a clinic, 2020 and 
+            % of residents obtaining abortions who traveled 
+            out of state for care, 2020. Score: 2. 
+            Both features are associated to the stated proposition. </li>
+          
+          <li> 2.	Fitting a trend line. Score: 0.5. 
+            Fitting a trend line makes it easier to identify 
+            positive and negative patterns in the relationship. </li>
+          
+          <li> 3.	Abbreviating the state names and labeling 
+            it to the data belonging to the state. Score: 2. 
+            Adding and abbreviating the state name in the 
+            plot makes it easier to identify which states 
+            are closely following the trend and which are 
+            outliers. </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="../images/perChart2.jpg" alt="" />
+          <figcaption> Chart 2: States with highlighted bars in red 
+            color are the states that are actually deviating in their travel
+            percentage. 
+             </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li> 1.	Computing the deviation in the actual 
+            travel percentage and the predicted travel 
+            percentage by fitting the trend line. Score: 1.5.
+            By plotting the deviations on the plot, 
+            residents from a state that travel more or less 
+            can be easily interpreted. </li>
+          <li> 2.	Using a zero reference line. Score: 0.5.
+            The baseline of zero separates the higher rate 
+            of travel percentage from the lower rate. </li>
+          <li> 3.	Distinguishing the bars representing 
+            higher and lower travel rate by using a 
+            different color and by applying a threshold to 
+            highlight only the states having higher and lower 
+            travel rate greater than equal to 10. Score: -0.5.
+            The deceptive technique used here is by applying 
+            the threshold by taking the absolute value of the 
+            deviation travel values. </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p> For the persuasive visualizations supporting the 
+          proposition, plotting the charts using a scatter 
+          plot and a bubble chart was pretty straightforward, 
+          because the charts were created using matplotlib 
+          and NumPy library in Python and there is an inbuilt 
+          function for fitting the trend line. What was more 
+          surprising were the outlier states in the data. 
+          Even with a moderately positive correlation 
+          (r = 0.597), there are a few states deviating 
+          substantially from the trend line, highlighting 
+          that the relationship was not consistent across 
+          all states. </p>
+
+        <p> Ethical analysis and visualization is presenting 
+          data truthfully, using appropriate visual designs, 
+          and clear axis and chart titles. Highlighting 
+          important information can help viewers unveil 
+          important patterns in the data and make informed 
+          decisions. However, persuasion becomes misleading 
+          when visualizations conceal relevant context, 
+          distort scales, or present transformed data as if 
+          it was the original. For example, a descending bar 
+          chart can become deceptive if the values being 
+          plotted are not the actual data but are instead 
+          created by multiplying the original measurements 
+          by another variable. If the chart is presented and 
+          labeled as though it shows the original values, 
+          viewers may be led to believe that certain states 
+          have much higher levels of the measured outcome 
+          than they actually do. In this case, the deception 
+          arises not from the bar chart itself, but from 
+          misrepresenting a derived metric as the underlying 
+          data. Therefore, persuasive visualization is 
+          acceptable when it improves understanding while 
+          preserving accuracy, but it becomes misleading 
+          when it changes the story the data actually tells. </p>
+      </section>
+    </main>
+  </body>
+</html>
