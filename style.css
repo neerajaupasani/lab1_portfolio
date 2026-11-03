@@ -154,5 +154,81 @@ section {
 
 }
 
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-year {
+  color: gray;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-variant-numeric: oldstyle-nums;
+  margin: 0;
+}
+
+#projects-plot-pie {
+  max-width: 15em;
+  margin-block: 2em;
+
+  overflow: visible;
+
+  opacity: 0.7;
+  cursor: pointer;
+
+}
+
+.swatch {
+  display: inline-block;
+  background-color: var(--color);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+
+
+}
+
+.legend {
+  display: grid;
+  gap: 0.8rem;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.legend-list {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+path {
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+.legend-list.selected {
+  font-weight: bold;
+}
+
+
+
 
 
