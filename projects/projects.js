@@ -57,7 +57,7 @@ data.forEach((d, idx) => {
 });*/
 
 
-let query = '';
+//let query = '';
 
 let searchInput = document.querySelector('.searchBar');
 
