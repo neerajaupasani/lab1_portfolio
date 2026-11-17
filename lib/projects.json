@@ -1,4 +1,5 @@
 [
+	
     {
 		"title": "Architecto minima sed omnis?",
         "year": "2026",
@@ -11,6 +12,13 @@
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Est, reiciendis aspernatur debitis maxime et itaque animi sit quod quo, tempore incidunt tempora dignissimos exercitationem enim numquam quam quaerat optio laborum ut unde hic delectus laboriosam? Quasi, cupiditate corporis."
 	},
+	{
+		"title": "Bike Share Station Map",
+		"year": "2026",
+		"image": "../images/bike-share-map.png",
+        "description": "Interactive map visualization of bike population in Boston and Cambridge city",
+        "url": "https://neerajaupasani.github.io/bike_population/"
+    },
 	{
 		"title": "Asperiores rem repellendus doloremque.",
         "year": "2025",
@@ -71,4 +79,5 @@
 		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
 		"description": "Tempore, eveniet minus velit, earum aperiam necessitatibus repellendus provident accusamus illum officiis doloribus, eum saepe est aut numquam distinctio pariatur natus totam repellat. Numquam nulla libero sapiente magnam nostrum ex."
 	}
+	
 ]
