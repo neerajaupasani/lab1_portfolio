@@ -13,30 +13,71 @@
 
      <p> This page includes stats about the code in this website. </p>
 
+     <div class = "time-slider">
+        <label>
+            Commits until:
+            <input type = "range" id = "commit-progress" min = 0 max = 100 />
+        </label>
+        
+        <time id = "commit-time"></time>
+     </div>
+
+     
+
+
+
      <div id="stats"> </div>
+
+    
 
      <h2>Commits by time of day</h2>
 
-     <p id="selection-count">No commits selected</p>
      
-     <div id="chart"> </div>
 
-     <dl id="commit-tooltip" class="info tooltip" hidden>
+     <div id="scrolly-1">
+        <div id="scatter-story">some filler text here</div>
+        <div id="scatter-plot">
+            <!-- old code -->
+            <p id="selection-count">No commits selected</p>
      
-     <dt>Commit</dt>
-     
-     <dd>
-        <a href="" id="commit-link" target="_blank"></a>
-     </dd>
-     
-     <dt>Date</dt>
-     
-     <dd id="commit-date"></dd>
+            <div id="chart"> </div>
 
-     <!-- Add: Time, author, lines edited -->
+            <dl id="commit-tooltip" class="info tooltip" hidden>
+     
+            <dt>Commit</dt>
+     
+            <dd>
+                <a href="" id="commit-link" target="_blank"></a>
+            </dd>
+     
+            <dt>Date</dt>
+     
+            <dd id="commit-date"></dd>
+
+            <!-- Add: Time, author, lines edited -->
+            </dl>
+
+            <dl id="language-breakdown" class="stats"> </dl>
+        </div>
+     </div>
+
+     <dl id="files">
+        <!-- we want the following structure for each file:
+         <div>
+            <dt>
+                <code>{file.name}</code>
+            </dt>
+            <dd>
+                <div class="line"></div>
+            </dd>
+
+         </div>
+        -->
      </dl>
 
-     <dl id="language-breakdown" class="stats"> </dl>
+
+
+
 
 
 
